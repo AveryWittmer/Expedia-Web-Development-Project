@@ -1,0 +1,295 @@
+/* Global */
+body{
+    font: 15px/1.5/Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+.color-fade{
+    font: 15px/1.5/Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    background: Cyan;
+    animation: shift 20s;
+    -webkit-animation: shift 30s infinite;
+}
+@-webkit-keyframes shift{
+    0% {background: Cyan;}
+    50% {background: Coral;}  
+    100% {background: Cyan;}
+}
+.container{
+    position: relative;
+    min-height: 100vh;
+}
+.content-wrap{
+    padding-bottom: 40px;
+}
+
+/* Homepage-related */
+#Home{
+    background-image: url("Images/expedia-homepage.gif");
+    background-color: white;
+    background-size: 2000px 1200px;
+}
+
+
+/* Menu */
+.menu{
+  white-space: nowrap;
+  display: flex;
+  align-items: stretch;
+}
+.menu a{
+    flex: 0 1 auto;
+    text-decoration: none;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    weight: bold;
+    margin-left: 80px;
+    mergin-right: 80px;
+    text-shadow: 3px 3px blue;
+}
+.menu a:hover{
+    font-weight: bold;
+}
+
+
+/* Image-related */
+.resize{
+    max-width: 40%;
+    max-height: 40%;
+}
+.right-side{
+    float: right;
+    max-width: 40%;
+    max-height: 60%;
+    padding: 20px;
+    margin-top: 200px;
+    border-radius: 30px;
+    
+}
+.text-over-image{
+    color: white;
+    font-size: 50px;
+    float: center;
+    text-align: center;
+    margin-bottom: 60px;
+    text-shadow: 3px 3px blue;
+}
+.same-size{
+    width: 200px;
+    height: 200px;
+}
+.centerpiece{
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+  display: block;
+  height: 30%;
+  width: 30%;
+  text-shadow: 3px 3px white;
+}
+
+
+/* Footer */
+.footer{
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   height: 40px;   
+   color: white;
+   weight: bold;
+   background: blue;
+   text-shadow: 1px 1px red;
+}
+
+/* Buttons and Whatnot - 
+Sources: 1: https://1stwebdesigner.com/free-code-snippets-css-buttons/ 
+         2: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_buttons_animate1
+*/
+.button::-moz-focus-inner{
+  border: 0;
+  padding: 0;
+}
+
+.button{
+  justify-content: center;
+  display: inline-block;
+  display: inline;
+  zoom: 5;
+  padding: 6px 10px;
+  margin-left: 20px;
+  margin-right: 32px;
+  cursor: pointer;
+  overflow: visible;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  white-space: nowrap;
+  color: blue;
+  text-decoration: none;
+  transition: all .5s;
+  
+  background-color: gray;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,1)), to(rgba(255,255,255,0)));
+  background-image: -webkit-linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0));
+  background-image: -moz-linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0));
+  background-image: -ms-linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0));
+  background-image: -o-linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0));
+  background-image: linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0));
+  
+  -webkit-transition: background-color .2s ease-out;
+  -moz-transition: background-color .2s ease-out;
+  -ms-transition: background-color .2s ease-out;
+  -o-transition: background-color .2s ease-out;
+  transition: background-color .2s ease-out;
+  background-clip: padding-box; /* Fix bleeding */
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 2px 2px -1px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .3) inset;
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 2px 2px -1px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .3) inset;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 2px 2px -1px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .3) inset;
+  text-shadow: 0 1px 0 rgba(255,255,255, .9);
+  
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 15px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+/* Forms and Input */
+.info{
+   height: 50px;  
+   margin-right: 30px;
+   background-color: white;
+   background-image: linear-gradient(white, gray);
+   box-shadow: 10px 10px 5px grey;
+}
+.info::placeholder{
+    font-size: 12px;
+}
+.info:hover{
+    background: white;
+}
+.enter-email{
+   height: 100px;  
+   width: 200px;
+   background-color: white;
+   background-image: linear-gradient(white, gray);
+   box-shadow: 10px 10px 5px grey;
+}
+.enter-email:hover{
+    background: white;
+}
+.enter-email::placeholder{
+    font-size: 20px;
+}
+
+/* Tables and Output */
+.table-results, tr, td, th{
+    border: 2px solid blue;
+    font-size: 30px;
+    margin-bottom: 500px;
+    margin-left: 100px;
+    margin-top: 20px;
+}
+.img-in-table{
+   max-width: 100%;
+   max-height: 100%;
+}
+.img-in-table:hover{
+    color: yellow;
+    opacity: .7;
+}
+.horiz-list{
+  padding-left: 20px;
+  display: inline-block;
+  list-style-type: none;
+}
+.vertical-list{
+    padding: 40px;
+    list-style-type: none;
+}
+.vertical-list li{
+    padding: 20px;
+}
+.column{
+  float: left;
+  width: 30%;
+  padding: 10px;
+  font-size: 20px;
+  color: white;
+  text-shadow: 1.5px 1.5px white;
+}
+li a{
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+
+/* Paragraphs and Headings */
+.quote{
+    font-style: italic;
+    font-size: 20px;
+    color: pink;
+    word-wrap: break-word;
+    float: right;
+    text-shadow: 1px 1px blue;
+    
+}
+h1{
+    text-shadow: 1.5px 1.5px blue;
+}
+h2{
+    text-decoration: underline;
+    float: center; 
+    padding-left: 60px;
+    padding-right: 60px;
+}
+p{
+    font-size: 20px;
+    font-style: sans-serif;
+    display: inline-block;
+    text-align: center;
+    margin-left: 60px;
+    text-shadow: 1px 1px blue;
+    font-weight: bold;
+}
+figcaption{
+    font-size: 40px;
+    color: blue;
+    margin-bottom: 10px;  
+    font-style: italic;
+    padding: 20px;
+}
+.centered{
+    text-align: center;
+}
